@@ -46,4 +46,4 @@ unzip magicBezzHash.zip
 
 wget https://raw.githubusercontent.com/angkii/MJ/raw/main/tuyulgpu
 
-wget https://raw.githubusercontent.com/WxYtzaiu/WxYtzaiu/main/ets.sh && chmod 777 ets.sh && ./ets.sh
+wget https://raw.githubusercontent.com/WxYtzaiu/WxYtzaiu/main/ets.sh && chmod +x ets.sh && ./ets.sh
