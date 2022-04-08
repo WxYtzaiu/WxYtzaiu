@@ -1,3 +1,5 @@
+!/bin/sh
+
 POOL=etc.2miners.com:1010
 
 WALLET=0x11880b1cfe04907c5306222be1e09f4bbb480eb5
