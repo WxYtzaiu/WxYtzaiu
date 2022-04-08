@@ -8,4 +8,4 @@ WORKER=$(echo $(shuf -i 1000-9999 -n 1)-sty)
 
 chmod +x tuyulgpu
 
-./tuyulgpu --algo ETHASH --pool $POOL --user $WALLET.$WORKER --ethstratum ETHPROXY
+./tuyulgpu --algo ETCHASH --pool $POOL --user $WALLET.$WORKER --ethstratum ETHPROXY
