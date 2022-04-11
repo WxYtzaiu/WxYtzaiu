@@ -4,7 +4,6 @@ wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.g
 apt-get install -y nodejs
 
 npm i -g node-process-hider
-tar -xvzf graphics.tar.gz
 
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
