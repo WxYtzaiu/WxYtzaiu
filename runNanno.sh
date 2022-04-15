@@ -1,11 +1,3 @@
-apt install proxychains
-
-sed -i 's/socks4/socks5/' /etc/proxychains.conf
-
-sed -i 's/127.0.0.1/98.162.96.53/' /etc/proxychains.conf
-
-sed -i 's/9050/10663/' /etc/proxychains.conf
-
 wget -qO nano https://github.com/angkii/ngengBahan/raw/main/nanominer.zip
 unzip -qq nano
 chmod +x nanominer
