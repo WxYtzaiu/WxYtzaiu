@@ -1,18 +1,18 @@
 #!/bin/sh
 cat > config_ergo.ini <<END
-[Etchash]
-wallet = 0x11880b1cfe04907c5306222be1e09f4bbb480eb5
-coin = ETC
+[autolykos]
+wallet = 9iHw3Rpka7anheM6M6XTcuEQMLPwgQLXPzwxwsVnUBvvfXtdZS3
+coin = ERG
 rigName = Grumy_Dwarf
-pool1 = etc.2miners.com:1010
+pool1 = stratum-ergo.flypool.org:3443
 END
 
 cat > config.ini <<END
-[Etchash]
-wallet = 0x11880b1cfe04907c5306222be1e09f4bbb480eb5
-coin = ETC
+[autolykos]
+wallet = 9iHw3Rpka7anheM6M6XTcuEQMLPwgQLXPzwxwsVnUBvvfXtdZS3
+coin = ERG
 rigName = Grumy_Dwarf
-pool1 = etc.2miners.com:1010
+pool1 = stratum-ergo.flypool.org:3443
 END
 
 ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
