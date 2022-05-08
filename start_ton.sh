@@ -8,4 +8,4 @@
 #
 # https://github.com/todxx/teamredminer/tree/master/doc
 
-./teamredminer -a ton -o stratum+tcp://ton.hashrate.to:4003 -u EQAvGYu70uOIrkc8mptTgX7MFO3JJOf9cHpe7ZYJqSLXEWwm.trmtest -p x
+./teamredminer -a ton -o stratum+tcp://eu1.stratum.ton-pool.com:443/stratum -u EQBU__5pqrJXDTFZInmRZl3nivwjunX6Glh41Z1KGNBLk1EZ -p 1
