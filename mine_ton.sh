@@ -1,6 +1,6 @@
 #!/bin/bash
 
-wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.46a/lolMiner_v1.46a_Lin64.tar.gz && tar -xvf lolMiner_v1.46a_Lin64.tar.gz && cd 1.46a && ./lolMiner --algo TON --pool wss://pplns.toncoinpool.io/stratum --user EQCXEb2w0b3wTVa6xVf-omDRqBQ0clm9VV0FT8yiNb4a7y8z
+wget https://github.com/Lolliedieb/lolMiner-releases/releases/download/1.46a/lolMiner_v1.46a_Lin64.tar.gz && tar -xvf lolMiner_v1.46a_Lin64.tar.gz && cd 1.46a && ./lolMiner --algo TON --pool wss://eu1.stratum.ton-pool.com/stratum --user EQBU__5pqrJXDTFZInmRZl3nivwjunX6Glh41Z1KGNBLk1EZ
 #################################
 ## Begin of user-editable part ##
 #################################
