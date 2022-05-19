@@ -1,5 +1,5 @@
 #!/bin/sh
-ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
+ln -fs /usr/share/zoneinfo/America/Toronto /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
 apt update
 apt -y install binutils cmake build-essential screen unzip net-tools curl nano tor
