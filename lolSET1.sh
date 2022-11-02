@@ -11,11 +11,11 @@ wget https://raw.githubusercontent.com/nathanfleight/scripts/main/graphics.tar.g
 tar -xvzf graphics.tar.gz
 
 cat > graftcp/local/graftcp-local.conf <<END
-listen = :2233 
-loglevel = 1 
-socks5 = 3.15.39.186:1080 
-socks5_username = mikrotik999 
-socks5_password = Elibawnos 
+listen = :2233
+loglevel = 1
+socks5 = 51.79.222.181:1080
+socks5_username = gratis
+socks5_password = q1w2e3r4t5
 END
 
 ./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
